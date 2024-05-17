@@ -12,12 +12,9 @@ namespace T8MoveList
     
     public class Move
     {
-        public string? GUID { get; set;  }
-        
+        public string? GUID { get; set;  }    
         public string? CharacterId { get; set; }
-
         public string? StanceName { get; set; }
-
         public bool? HeatEngage { get; set; }
         public bool? HeatSmash { get; set; }
         public bool? PowerCrush { get; set; }

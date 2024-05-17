@@ -30,10 +30,12 @@ using (TextFieldParser parser = new TextFieldParser("D:\\projects\\T8MoveList\\T
     }
 
     Console.WriteLine(moves.Count());
-    foreach (Move move in moves)
-    {
-        Console.WriteLine( JsonSerializer.Serialize<Move>(move, options1));
-    }
+    //foreach (Move move in moves)
+    //{
+    //    Console.WriteLine( JsonSerializer.Serialize<Move>(move, options1));
+    //}
+    await using FileStream createStream = File.Create(@"D:\\projects\\T8MoveList\\T8MoveList\\MoveList.json");
+    await JsonSerializer.SerializeAsync(createStream, moves);
 }
 
 
